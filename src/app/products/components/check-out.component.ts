@@ -6,10 +6,10 @@ import { ProductsService } from '../../shared/services/products.service';
 import { Cart } from '../../models/cart';
 
 @Component({
-    templateUrl: './templates/cart.component.html'
+    templateUrl: './templates/check-out.component.html'
 })
 
-export class CartComponent implements OnInit {
+export class CheckOutComponent implements OnInit {
 	cart: Cart;
 	requesting = false;
 	constructor(private activatedRoute: ActivatedRoute, private productsService: ProductsService) {

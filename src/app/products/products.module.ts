@@ -10,6 +10,7 @@ import { CartResolver } from './resolves/cart.resolve';
 import { ProductsComponent } from './components/products.component';
 import { ProductComponent } from './components/product.component';
 import { CartComponent } from './components/cart.component';
+import { CheckOutComponent } from './components/check-out.component';
 
 @NgModule({
     imports: [
@@ -29,7 +30,8 @@ import { CartComponent } from './components/cart.component';
     declarations: [
         ProductsComponent,
         ProductComponent,
-        CartComponent
+        CartComponent,
+        CheckOutComponent
     ]
 })
 

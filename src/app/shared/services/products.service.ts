@@ -28,9 +28,21 @@ class ProductsService {
 	getCart(): Observable<Cart> {
 		const cartToken = this.storageService.get('cartToken');
 		if (!cartToken) {
-			return ;
+			return new Observable();
 		}
 		return this.apiConnector.requestAPI('get', '/cart/'+cartToken);
+	}
+
+	updateCart(updates): Observable<Cart> {
+		const cartToken = this.storageService.get('cartToken');
+		const items = [];
+		updates.forEach(item => {
+			items.push({ url: item.url, quantity: item.quantity });
+		})
+		if (!cartToken) {
+			return new Observable();
+		}
+		return this.apiConnector.requestAPI('patch', '/cart/'+cartToken, {items})
 	}
 }
 

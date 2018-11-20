@@ -6,7 +6,8 @@ import { ProductComponent } from './components/product.component';
 import { CartComponent } from './components/cart.component';
 import { ProductsResolver } from "./resolves/products.resolve";
 import { ProductResolver } from "./resolves/product.resolve"
-import { CartResolver } from "./resolves/cart.resolve"
+import { CartResolver } from "./resolves/cart.resolve";
+import { CheckOutComponent } from './components/check-out.component';
 
 const routes: Routes = [
 	{
@@ -34,6 +35,13 @@ const routes: Routes = [
 	{
 		path: 'cart',
 		component: CartComponent,
+		resolve: {
+			cart: CartResolver,
+		}
+	},
+	{
+		path: 'checkouts',
+		component: CheckOutComponent,
 		resolve: {
 			cart: CartResolver,
 		}
