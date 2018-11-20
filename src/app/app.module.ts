@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { SharedModule } from './shared/shared.module';
+import { ProductsModule } from './products/products.module';
+import { AppRouting } from './app.routing';
 
 import { AppComponent } from './app.component';
 
@@ -8,7 +11,10 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    SharedModule,
+    ProductsModule,
+    AppRouting
   ],
   providers: [],
   bootstrap: [AppComponent]

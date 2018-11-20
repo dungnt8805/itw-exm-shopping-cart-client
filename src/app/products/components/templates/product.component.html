@@ -1,0 +1,14 @@
+<div>
+	<p>{{product.title}}</p>
+	<div><img src="{{product.image}}" width="400"/></div>
+	<p>{{product.description}}</p>
+	<p>Price: {{product.price}}</p>
+	<div>
+		<button class="btn btn-sm" (click)="decreaseQty()">-</button>
+		<input [(ngModel)]="item.quantity" type="number" #quantity="ngModel"/>
+		<button class="btn btn-sm" (click)="increaseQty()">+</button>
+	</div>
+	<div>
+		<button class="btn btn-success" (click)="addToCart()" [disabled]="requesting">Add To Cart</button>
+	</div>
+</div>
