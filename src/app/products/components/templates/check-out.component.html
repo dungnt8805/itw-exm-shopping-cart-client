@@ -1,10 +1,10 @@
 <p style="text-align: center">Checkout</p>
 <table class="table table-bordered">
 	<tr>
-		<td>Item</td>
-		<td>Price</td>
-		<td>Quantity</td>
-		<td>Total Price</td>
+		<td (click)="sort('title')">Item <i *ngIf="_sortByTitle" class="fa fa-caret-down"></i></td>
+		<td (click)="sort('price')">Price <i *ngIf="_sortByPrice" class="fa fa-caret-down"></i></td>
+		<td (click)="sort('qty')">Quantity <i *ngIf="_sortByQty" class="fa fa-caret-down"></i></td>
+		<td (click)="sort('total')">Total Price <i *ngIf="_sortByTotal" class="fa fa-caret-down"></i></td>
 	</tr>
 	<tr *ngFor="let item of cart.items; let idex = index">
 		<td>{{item.title}}</td>
